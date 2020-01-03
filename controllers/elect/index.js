@@ -59,6 +59,7 @@ exports.profile = (req, res, next) => {
     req.getConnection((err, connection) => {
         if (err) return next(err)
         var sql = `SELECT Name,DEFAULTDEPTID FROM userinfo WHERE Badgenumber =?`;
+        connection.query("SET NAMES utf8");
         connection.query(sql,[badgenumber],(err, results) => {
             if (err) return console.log(err)
             res.send(results)
