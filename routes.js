@@ -24,6 +24,4 @@ module.exports = function (app) {
     app.get('/get-main/:id/:emonth/:eyear',EletIndex.showmonth)
     app.get('/get-detail/:emonth/:eyear/:badgenumber',EletIndex.showDetail)
     app.get('/get-profile/:badgenumber',EletIndex.profile)
-
-    app.get('/get-select/:id/:emonth/:eyear',EletIndex.selectmonth)
 }
